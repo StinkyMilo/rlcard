@@ -31,7 +31,7 @@ class GameFrame(tk.Frame):
         # Set scale_factor_multiplier.
         #   You can change scale_factor_multiplier to increase or decrease the size of the cards,
         #   leaving the size of the the frame the same.
-        scale_factor_multiplier = 1.5  # type: float  # Note this: change to scale card size
+        scale_factor_multiplier = 0.75  # type: float  # Note this: change to scale card size
 
         preference_window_size_factor = configurations.WINDOW_SIZE_FACTOR
         try:

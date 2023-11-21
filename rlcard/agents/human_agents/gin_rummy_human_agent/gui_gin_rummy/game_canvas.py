@@ -36,7 +36,6 @@ import rlcard.games.gin_rummy.utils.utils as gin_rummy_utils
 from rlcard.games.gin_rummy.utils.action_event import KnockAction, GinAction
 from rlcard.games.gin_rummy.utils.gin_rummy_error import GinRummyProgramError
 
-
 class GameCanvas(tk.Canvas):
 
     def __init__(self, parent: tk.Frame, window_width, window_height, scale_factor, game_app: 'GameApp'):
@@ -258,6 +257,7 @@ class GameCanvas(tk.Canvas):
                 result.append(PlayerType.computer_player)
         return result
 
+    # TODO: Modify this
     def is_treating_as_human(self, player_id) -> bool:
         result = False
         player_types = self.player_types
