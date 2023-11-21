@@ -19,10 +19,7 @@ def set_seed(seed):
 
 def get_device():
     import torch
-    if torch.backends.mps.is_available():
-        device = torch.device("mps:0")
-        print("--> Running on the GPU")
-    elif torch.cuda.is_available():
+    if torch.cuda.is_available():
         device = torch.device("cuda:0")
         print("--> Running on the GPU")
     else:

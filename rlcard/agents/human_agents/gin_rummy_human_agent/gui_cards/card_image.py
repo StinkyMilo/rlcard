@@ -70,7 +70,7 @@ def get_card_back_image(scale_factor: float):
     card_scale_factor = 0.25 * scale_factor * 0.666
     card_image_width = int(image_width * card_scale_factor)
     card_image_height = int(image_height * card_scale_factor)
-    image = image.resize((card_image_width, card_image_height), Image.ANTIALIAS)
+    image = image.resize((card_image_width, card_image_height), Image.LANCZOS)
     return image
 
 
@@ -85,7 +85,7 @@ class CardImage(ImageTk.PhotoImage):
         card_scale_factor = 0.25 * self.scale_factor
         card_image_width = int(image_width * card_scale_factor)
         card_image_height = int(image_height * card_scale_factor)
-        image = image.resize((card_image_width, card_image_height), Image.ANTIALIAS)
+        image = image.resize((card_image_width, card_image_height), Image.LANCZOS)
         super().__init__(image=image, name="{}{}".format(rank, suit))
 
 
@@ -99,7 +99,7 @@ class CardBackImage(ImageTk.PhotoImage):
         card_scale_factor = 0.25 * self.scale_factor
         card_image_width = int(image_width * card_scale_factor)
         card_image_height = int(image_height * card_scale_factor)
-        image = image.resize((card_image_width, card_image_height), Image.ANTIALIAS)
+        image = image.resize((card_image_width, card_image_height), Image.LANCZOS)
         draw = ImageDraw.Draw(image)
         shape = [3 * self.scale_factor,
                  3 * self.scale_factor,
@@ -129,7 +129,7 @@ class BlankCardImage(ImageTk.PhotoImage):  # FIXME: not used
         card_scale_factor = 0.25 * self.scale_factor
         card_image_width = int(image_width * card_scale_factor)
         card_image_height = int(image_height * card_scale_factor)
-        image = image.resize((card_image_width, card_image_height), Image.ANTIALIAS)
+        image = image.resize((card_image_width, card_image_height), Image.LANCZOS)
         # image.putalpha(128)
 
         # draw = ImageDraw.Draw(image)
@@ -155,7 +155,7 @@ class BorderLessCardImage(ImageTk.PhotoImage):  # FIXME: not used
         card_scale_factor = 0.25 * self.scale_factor
         card_image_width = int(image_width * card_scale_factor)
         card_image_height = int(image_height * card_scale_factor)
-        image = image.resize((card_image_width, card_image_height), Image.ANTIALIAS)
+        image = image.resize((card_image_width, card_image_height), Image.LANCZOS)
 
         draw = ImageDraw.Draw(image)
         shape = [(0, 0), (card_image_width, card_image_height)]

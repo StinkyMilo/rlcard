@@ -26,7 +26,7 @@ setuptools.setup(
     description="A Toolkit for Reinforcement Learning in Card Games",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/datamllab/rlcard",
+    url="https://github.com/StinkyMilo/rlcard",
     keywords=["Reinforcement Learning", "game", "RL", "AI"],
     packages=setuptools.find_packages(exclude=('tests',)),
     package_data={
